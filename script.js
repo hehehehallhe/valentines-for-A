@@ -152,6 +152,7 @@ class SongPlayer {
 
         console.log("Playing:", currentSong.songUrl); // Debug log
 
+        this.audio.load();
         this.audio.play().catch(error => {
             console.error("Audio playback error:", error);
         });
@@ -192,5 +193,6 @@ const songPlaylist2 = [
 const player1 = new SongPlayer("play-btn-1", "pause-btn-1", "audio-1", "album1", songPlaylist1);
 
 const player2 = new SongPlayer("play-btn-2", "pause-btn-2", "audio-2", "album2", songPlaylist2);
+
 
 
