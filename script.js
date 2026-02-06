@@ -185,12 +185,12 @@ class SongPlayer {
 
 // Album 1 (plays before yes) - song1.mp3 with album1.webp
 const songPlaylist1 = [
-    { songUrl: 'song1.mp3', albumArt: 'album1.webp' },
+    { songUrl: 'song1.wav3', albumArt: 'album1.webp' },
 ];
 
 // Album 2 (plays after yes) - song2.mp3 with album2.webp
 const songPlaylist2 = [
-    { songUrl: 'song2.mp3', albumArt: 'album2.webp' },
+    { songUrl: 'song2.wav', albumArt: 'album2.webp' },
 ];
 
 // =============================================
@@ -200,3 +200,4 @@ const songPlaylist2 = [
 const player1 = new SongPlayer("play-btn-1", "pause-btn-1", "audio-1", "album1", songPlaylist1);
 
 const player2 = new SongPlayer("play-btn-2", "pause-btn-2", "audio-2", "album2", songPlaylist2);
+
