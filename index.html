@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>Letter for You A.♡</p>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Will you be my Valentine?</h1>
+
+        <img src="nanobombs-cat.gif" class="cat" id="letter-cat" />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No" />
+          </div>
+        </div>
+
+        <p id="final-text" class="final-text" style="display: none">
+          <strong>Valentine Date:</strong> nowhere rn cuz borad, hopefully soon🤗
+        </p>
+      </div>
+
+      <!-- Album Player 1 at Bottom Left (Album 1) - Hidden initially -->
+      <div class="song-player-bottom" id="album-player-1" style="display: none;">
+        <img src="album1.webp" alt="Album 1" class="album-art" id="album1" width="120" height="120" />
+        <div class="player-controls">
+          <button class="play-btn" id="play-btn-1">▶</button>
+          <button class="pause-btn" id="pause-btn-1">⏸</button>
+        </div>
+        <audio id="audio-1"></audio>
+      </div>
+
+      <!-- Album Player 2 at Bottom Left (Shows after Yes is pressed) -->
+      <div class="song-player-bottom" id="album-player-2" style="display: none;">
+        <img src="album2.webp" alt="Album 2" class="album-art" id="album2" width="120" height="120" />
+        <div class="player-controls">
+          <button class="play-btn" id="play-btn-2">▶</button>
+          <button class="pause-btn" id="pause-btn-2">⏸</button>
+        </div>
+        <audio id="audio-2"></audio>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
