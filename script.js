@@ -133,6 +133,13 @@ class SongPlayer {
     init() {
         this.playBtn.addEventListener("click", () => this.play());
         this.pauseBtn.addEventListener("click", () => this.pause());
+
+        // Log errors so we can see why the audio won't load
+        this.audio.addEventListener('error', (e) => {
+            const errorCode = this.audio.error?.code;
+            const errorMsg = this.audio.error?.message;
+            console.error(`Audio error (code ${errorCode}):`, this.audio.src, errorMsg);
+        });
     }
 
     play() {
@@ -193,6 +200,3 @@ const songPlaylist2 = [
 const player1 = new SongPlayer("play-btn-1", "pause-btn-1", "audio-1", "album1", songPlaylist1);
 
 const player2 = new SongPlayer("play-btn-2", "pause-btn-2", "audio-2", "album2", songPlaylist2);
-
-
-
